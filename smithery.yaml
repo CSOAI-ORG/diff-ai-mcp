@@ -1,0 +1,10 @@
+name: diff-ai-mcp
+description: "MEOK AI Labs — diff-ai-mcp"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/diff-ai-mcp
+license: MIT
+categories: [Developer Tools, Text Processing]
+tags: [diff, file-comparison, text-diff, merge-conflict, code-comparison]
+runtime: python
+entrypoint: server.py

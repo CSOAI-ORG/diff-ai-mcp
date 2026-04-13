@@ -1,0 +1,20 @@
+{
+  "name": "diff-ai-mcp",
+  "description": "MEOK AI Labs \u2014 diff-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/diff-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "run"
+  ],
+  "categories": [
+    "Developer Tools",
+    "Text Processing"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
