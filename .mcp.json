@@ -1,6 +1,6 @@
 {
   "name": "diff-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs \u2014 Compare texts and show differences.",
+  "description": "AI-powered diff ai MCP server for agents. Supports diff texts, diff summary, word diff. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
