@@ -1,0 +1,53 @@
+{
+  "name": "diff-ai",
+  "description": "Compare texts, generate unified/context diffs, and create/apply patches. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/diff-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "diff_texts",
+      "description": "Generate a unified diff between two text inputs."
+    },
+    {
+      "name": "diff_files",
+      "description": "Generate a diff between two file contents in unified, context, or ndiff format."
+    },
+    {
+      "name": "generate_patch",
+      "description": "Generate a patch file from original and modified text that can be applied with the apply_patch tool."
+    },
+    {
+      "name": "apply_patch",
+      "description": "Apply a unified diff patch to the original text and return the result."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Natural Language Processing"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
