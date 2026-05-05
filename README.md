@@ -1,39 +1,38 @@
-# Diff AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Compare texts and show differences with detailed change analysis
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/diff-ai-mcp)](https://github.com/CSOAI-ORG/diff-ai-mcp/stargazers)
+
+# udiffU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/diff-ai-mcp)](https://www.npmjs.com/package/@meok-ai/diff-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/diff-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install diff-ai-mcp
+# or
+npm install -g @meok-ai/diff-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `diff_texts`
-Compare two texts and show line-by-line differences.
-
-**Parameters:**
-- `text_a` (str): First text
-- `text_b` (str): Second text
-
-### `diff_summary`
-Generate a summary of differences between two texts.
-
-**Parameters:**
-- `text_a` (str): First text
-- `text_b` (str): Second text
-
-## Authentication
-
-Free tier: 30 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
