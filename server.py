@@ -25,7 +25,22 @@ mcp = FastMCP("diff-ai", instructions="Compare texts, generate unified/context d
 
 @mcp.tool()
 def diff_texts(text_a: str, text_b: str, context_lines: int = 3, label_a: str = "original", label_b: str = "modified", api_key: str = "") -> str:
-    """Generate a unified diff between two text inputs."""
+    """Generate a unified diff between two text inputs.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -59,7 +74,22 @@ def diff_texts(text_a: str, text_b: str, context_lines: int = 3, label_a: str = 
 
 @mcp.tool()
 def diff_files(content_a: str, content_b: str, filename_a: str = "file_a", filename_b: str = "file_b", output_format: str = "unified", api_key: str = "") -> str:
-    """Generate a diff between two file contents in unified, context, or ndiff format."""
+    """Generate a diff between two file contents in unified, context, or ndiff format.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -115,7 +145,22 @@ def diff_files(content_a: str, content_b: str, filename_a: str = "file_a", filen
 
 @mcp.tool()
 def generate_patch(original: str, modified: str, filename: str = "file.txt", api_key: str = "") -> str:
-    """Generate a patch file from original and modified text that can be applied with the apply_patch tool."""
+    """Generate a patch file from original and modified text that can be applied with the apply_patch tool.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -157,7 +202,23 @@ def generate_patch(original: str, modified: str, filename: str = "file.txt", api
 
 @mcp.tool()
 def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
-    """Apply a unified diff patch to the original text and return the result."""
+    """Apply a unified diff patch to the original text and return the result.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
