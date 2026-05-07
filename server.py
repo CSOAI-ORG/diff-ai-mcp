@@ -40,6 +40,15 @@ def diff_texts(text_a: str, text_b: str, context_lines: int = 3, label_a: str = 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        text_a (str): The text a to analyze or process.
+        text_b (str): The text b to analyze or process.
+        context_lines (int): The context lines to analyze or process.
+        label_a (str): The label a to analyze or process.
+        label_b (str): The label b to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -103,6 +112,15 @@ def diff_files(content_a: str, content_b: str, filename_a: str = "file_a", filen
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        content_a (str): The content a to analyze or process.
+        content_b (str): The content b to analyze or process.
+        filename_a (str): The filename a to analyze or process.
+        filename_b (str): The filename b to analyze or process.
+        output_format (str): The output format to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -188,6 +206,13 @@ def generate_patch(original: str, modified: str, filename: str = "file.txt", api
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        original (str): The original to analyze or process.
+        modified (str): The modified to analyze or process.
+        filename (str): The filename to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -260,6 +285,12 @@ def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        original (str): The original to analyze or process.
+        patch_text (str): The patch text to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
