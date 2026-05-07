@@ -1,3 +1,5 @@
+[![diff-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/diff-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/diff-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/diff-ai-mcp)](https://github.com/CSOAI-ORG/diff-ai-mcp/stargazers)
