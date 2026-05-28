@@ -2,7 +2,6 @@
 """Compare texts, generate diffs, and create/apply patches. — MEOK AI Labs."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, difflib, hashlib
@@ -66,7 +65,7 @@ def diff_texts(text_a: str, text_b: str, context_lines: int = 3, label_a: str = 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -138,7 +137,7 @@ def diff_files(content_a: str, content_b: str, filename_a: str = "file_a", filen
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -230,7 +229,7 @@ def generate_patch(original: str, modified: str, filename: str = "file.txt", api
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -308,7 +307,7 @@ def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": STRIPE_199})
     if err := _rl():
         return err
 
@@ -325,6 +324,15 @@ def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
     for line in patch_lines:
         if line.startswith('@@'):
             import re
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
             match = re.match(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@', line)
             if match:
                 if current_hunk:
@@ -386,5 +394,8 @@ def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
