@@ -21,6 +21,13 @@ def _rl(c="anon"):
 
 mcp = FastMCP("diff-ai", instructions="Compare texts, generate unified/context diffs, and create/apply patches. By MEOK AI Labs.")
 
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
 
 @mcp.tool()
 def diff_texts(text_a: str, text_b: str, context_lines: int = 3, label_a: str = "original", label_b: str = "modified", api_key: str = "") -> str:
@@ -92,7 +99,6 @@ def diff_texts(text_a: str, text_b: str, context_lines: int = 3, label_a: str = 
         "identical": text_a == text_b,
         "timestamp": datetime.now(timezone.utc).isoformat(),
     })
-
 
 @mcp.tool()
 def diff_files(content_a: str, content_b: str, filename_a: str = "file_a", filename_b: str = "file_b", output_format: str = "unified", api_key: str = "") -> str:
@@ -187,7 +193,6 @@ def diff_files(content_a: str, content_b: str, filename_a: str = "file_a", filen
         "timestamp": datetime.now(timezone.utc).isoformat(),
     })
 
-
 @mcp.tool()
 def generate_patch(original: str, modified: str, filename: str = "file.txt", api_key: str = "") -> str:
     """Generate a patch file from original and modified text that can be applied with the apply_patch tool.
@@ -265,7 +270,6 @@ def generate_patch(original: str, modified: str, filename: str = "file.txt", api
         "timestamp": datetime.now(timezone.utc).isoformat(),
     })
 
-
 @mcp.tool()
 def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
     """Apply a unified diff patch to the original text and return the result.
@@ -324,14 +328,6 @@ def apply_patch(original: str, patch_text: str, api_key: str = "") -> str:
     for line in patch_lines:
         if line.startswith('@@'):
             import re
-
-STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
-
-def _add_upgrade_tail(response, tier="free"):
-    """Append upgrade nudge to free-tier success responses."""
-    if isinstance(response, dict) and tier == "free":
-        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
-    return response
 
             match = re.match(r'^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@', line)
             if match:
@@ -392,7 +388,6 @@ def _add_upgrade_tail(response, tier="free"):
         "result_lines": len(result_lines),
         "timestamp": datetime.now(timezone.utc).isoformat(),
     })
-
 
 def main():
     mcp.run()
