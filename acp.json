@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "diff-ai-mcp",
+    "description": "Diff Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.8",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "diff-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "diff_texts",
+      "diff_files",
+      "generate_patch",
+      "apply_patch"
+    ]
+  }
+}

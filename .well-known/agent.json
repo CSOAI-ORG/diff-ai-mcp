@@ -1,0 +1,59 @@
+{
+  "name": "diff-ai-mcp",
+  "description": "Diff Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/diff-ai-mcp.html",
+  "version": "1.0.8",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "diff_texts",
+      "name": "Diff Texts",
+      "description": "diff_texts via diff-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "diff_files",
+      "name": "Diff Files",
+      "description": "diff_files via diff-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_patch",
+      "name": "Generate Patch",
+      "description": "generate_patch via diff-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "apply_patch",
+      "name": "Apply Patch",
+      "description": "apply_patch via diff-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
