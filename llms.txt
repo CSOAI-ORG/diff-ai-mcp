@@ -1,0 +1,33 @@
+# diff-ai-mcp
+# **MCP server for diff ai mcp operations**
+
+## Install
+```bash
+pip install diff-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `diff_texts`
+Generate a unified diff between two text inputs.
+
+### `diff_files`
+Generate a diff between two file contents in unified, context, or ndiff format.
+
+### `generate_patch`
+Generate a patch file from original and modified text that can be applied with the apply_patch tool.
+
+### `apply_patch`
+Apply a unified diff patch to the original text and return the result.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

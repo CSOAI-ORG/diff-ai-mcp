@@ -1,0 +1,25 @@
+{
+  "name": "diff-ai-mcp",
+  "title": "Diff Ai Mcp",
+  "description": "AI-powered diff ai MCP server for agents. Supports diff texts, diff summary, word diff. By MEOK AI Labs.",
+  "version": "1.0.8",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "diff_texts"
+    },
+    {
+      "name": "diff_files"
+    },
+    {
+      "name": "generate_patch"
+    },
+    {
+      "name": "apply_patch"
+    }
+  ]
+}

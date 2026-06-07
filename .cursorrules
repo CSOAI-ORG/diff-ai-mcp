@@ -1,0 +1,9 @@
+# diff-ai-mcp - Auto-trigger Rules
+
+When the user asks about diff, use diff-ai-mcp tools: diff_texts, diff_files, generate_patch, apply_patch
+
+**MCP server for diff ai mcp operations**
+
+Install: `pip install diff-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

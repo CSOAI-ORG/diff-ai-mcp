@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Compare texts, generate diffs, and create/apply patches. — MEOK AI Labs."""
+"""
+Compare texts, generate diffs, and create/apply patches. - MEOK AI Labs."""
 
 import sys, os
 from auth_middleware import check_access
