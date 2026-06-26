@@ -3,11 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "diff-ai-mcp"
-<<<<<<< Updated upstream
 version = "1.0.12"
-=======
-version = "1.0.7"
->>>>>>> Stashed changes
 readme = "README.md"
 description = "AI-powered diff ai MCP server for agents. Supports diff texts, diff summary, word diff. By MEOK AI Labs."
 license = {file = "LICENSE"}
