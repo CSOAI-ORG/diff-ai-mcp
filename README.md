@@ -134,7 +134,50 @@ Or: `pip install diff-ai-mcp` then run the `diff-ai-mcp` command (stdio transpor
 
 ## Examples
 
+<<<<<<< Updated upstream
 Once configured, ask your assistant, for example:
 - "Use `diff_texts` to …"
 - "Use `diff_files` to …"
 - "Use `generate_patch` to …"
+=======
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
+
+## License
+
+MIT © [MEOK AI Labs](https://meok.ai)
+
+<!-- meok-moat-footer-v1 -->
+---
+
+## Pairs with MEOK Governance Suite
+
+Build something that touches users? You need compliance. MEOK ships 38 governance MCPs that drop in alongside this tool — EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, FDA SaMD, MDR, Basel, MiFID II, MiCA, COPPA, and more.
+
+```bash
+# One-shot install of the governance pack
+npx meok-setup --pack governance
+```
+
+Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographically signed compliance attestations your auditor verifies independently.
+
+→ Full catalogue: [councilof.ai/catalogue](https://councilof.ai/catalogue)
+→ MEOK AI Labs: [meok.ai](https://meok.ai)
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
+
+>>>>>>> Stashed changes

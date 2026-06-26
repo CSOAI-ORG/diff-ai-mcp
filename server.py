@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """
+<<<<<<< Updated upstream
+=======
+Buy Pro: https://www.csoai.org/checkout
+>>>>>>> Stashed changes
 Compare texts, generate diffs, and create/apply patches. - MEOK AI Labs."""
 
 import sys, os
